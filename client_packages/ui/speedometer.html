@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: transparent;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        #speedometer-container {
+            position: absolute;
+            bottom: 140px;
+            right: 20px;
+            width: 130px;
+            height: 100px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            display: none;
+            text-align: center;
+            padding-top: 10px;
+        }
+        #speed-display {
+            font-size: 48px;
+            font-weight: bold;
+        }
+        #unit-display {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div id="speedometer-container">
+        <div id="speed-display">0</div>
+        <div id="unit-display">KM/H</div>
+    </div>
+
+    <script>
+        const speedDisplay = document.getElementById('speed-display');
+        const speedometerContainer = document.getElementById('speedometer-container');
+
+        function updateSpeed(speed) {
+            speedDisplay.innerText = speed;
+        }
+
+        function show() {
+            speedometerContainer.style.display = 'block';
+        }
+
+        function hide() {
+            speedometerContainer.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

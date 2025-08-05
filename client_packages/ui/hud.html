@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background-color: transparent;
+            font-family: Arial, sans-serif;
+        }
+        #hud-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-weight: bold;
+            -webkit-text-stroke: 0.1vw black;
+            text-align: right;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        #name-display {
+            color: #e49400;
+            -webkit-text-stroke: 0.08vw black;
+            font-size: 1.6vw;
+        }
+        #money-display {
+            color: green;
+            font-size: 2.5vw;
+        }
+        #hunger-display {
+            color: white;
+            -webkit-text-stroke: 0.08vw black;
+            font-size: 1.6vw;
+        }
+        #health-display {
+            color: #e49400;
+            -webkit-text-stroke: 0.08vw black;
+            font-size: 1.6vw;
+        }
+        .hunger-high {
+            color: green;
+        }
+        .hunger-medium {
+            color: yellow;
+        }
+        .hunger-low {
+            color: orangered;
+        }
+    </style>
+</head>
+<body>
+    <div id="hud-container">
+        <div id="name-display">Player</div>
+        <div id="money-display">$0</div>
+        <div id="hunger-display"><i class="fa-solid fa-utensils"></i> <span id="hunger-value">100</span></div>
+    </div>
+
+    <script>
+        function updateMoney(amount) {
+            const moneyDisplay = document.getElementById('money-display');
+            moneyDisplay.innerText = '$' + amount.toLocaleString();
+        }
+
+        function updateName(name) {
+            const nameDisplay = document.getElementById('name-display');
+            nameDisplay.innerText = name;
+        }
+
+        function updateHunger(level) {
+            const hungerValue = document.getElementById('hunger-value');
+            hungerValue.innerText = level;
+            hungerValue.className = '';
+            if (level > 50) {
+                hungerValue.classList.add('hunger-high');
+            } else if (level > 25) {
+                hungerValue.classList.add('hunger-medium');
+            } else {
+                hungerValue.classList.add('hunger-low');
+            }
+        }
+    </script>
+</body>
+</html>
