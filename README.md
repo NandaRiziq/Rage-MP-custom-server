@@ -2,7 +2,7 @@
 &nbsp;
 
 ### 📄 Design Document
-https://www.tldraw.com/f/fagwZ3e-qruWVYaU-wYr6?d=v-4.184.2857.1478.BHJt3A_vhUSfl8NV7WTqf
+[https://www.tldraw.com/f/fagwZ3e-qruWVYaU-wYr6?d=v-4.184.2857.1478.BHJt3A_vhUSfl8NV7WTqf](https://www.tldraw.com/f/fagwZ3e-qruWVYaU-wYr6?d=v-1828.-390.6278.3090.BHJt3A_vhUSfl8NV7WTqf)
 
 &nbsp;
 ### Core Gameplay
